@@ -3,27 +3,13 @@
 
 
 def add_matrices(mat1, mat2):
-    """
-    Adds two matrices recursively.
-
-    Args:
-        mat1: first matrix
-        mat2: second matrix
-
-    Returns:
-        A new matrix containing the sum,
-        or None if shapes are different.
-    """
-
-    # Check if shapes match
-    if type(mat1) != type(mat2):
+    """Adds two matrices recursively."""
+    if type(mat1) is not type(mat2):
         return None
 
-    # Base case: numbers
     if isinstance(mat1, (int, float)):
         return mat1 + mat2
 
-    # Check same length
     if len(mat1) != len(mat2):
         return None
 
