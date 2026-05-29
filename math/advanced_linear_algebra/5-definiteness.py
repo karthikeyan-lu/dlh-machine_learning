@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module for calculating definiteness of a matrix"""
+"""Module for calculating matrix definiteness"""
 
 import numpy as np
 
@@ -26,13 +26,13 @@ def definiteness(matrix):
     if np.all(eigenvalues > 0):
         return "Positive definite"
 
+    if np.all(eigenvalues < 0):
+        return "Negative definite"
+
     if np.all(eigenvalues >= 0):
         return "Positive semi-definite"
 
     if np.all(eigenvalues <= 0):
         return "Negative semi-definite"
-
-    if np.all(eigenvalues < 0):
-        return "Negative definite"
 
     return "Indefinite"
