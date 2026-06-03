@@ -1,19 +1,23 @@
-# Advanced Linear Algebra
+````md
+# Calculus
 
-This project covers advanced matrix operations and concepts in linear algebra using pure Python and NumPy.
+This project covers fundamental calculus concepts including summation, products, derivatives, partial derivatives, and integrals using pure Python.
 
 ## Learning Objectives
 
 At the end of this project, you should be able to explain:
 
-* What the determinant of a matrix is
-* What a minor matrix is
-* What a cofactor matrix is
-* What an adjugate matrix is
-* How to calculate the inverse of a matrix
-* What matrix definiteness means
-* How eigenvalues relate to definiteness
-* How to perform recursive matrix operations in Python
+* Summation and Product notation
+* What a series is
+* Common series
+* What a derivative is
+* What the product rule is
+* What the chain rule is
+* Common derivative rules
+* What a partial derivative is
+* What an indefinite integral is
+* What a definite integral is
+* What a double integral is
 
 ---
 
@@ -25,181 +29,170 @@ At the end of this project, you should be able to explain:
 * All files interpreted/compiled on Ubuntu 20.04 LTS using:
 
   * Python `3.9`
-  * NumPy `1.25.2`
+
 * All files should end with a new line
 * The first line of all files should be:
 
 ```python
 #!/usr/bin/env python3
-```
+````
 
 * Code should follow `pycodestyle` style (`version 2.11.1`)
 * All files must be executable
 * All modules and functions must be documented
+* Unless otherwise noted, you are not allowed to import any module
 
 ---
 
 # Files
 
-| File                | Description                                |
-| ------------------- | ------------------------------------------ |
-| `0-determinant.py`  | Calculates the determinant of a matrix     |
-| `1-minor.py`        | Calculates the minor matrix                |
-| `2-cofactor.py`     | Calculates the cofactor matrix             |
-| `3-adjugate.py`     | Calculates the adjugate matrix             |
-| `4-inverse.py`      | Calculates the inverse of a matrix         |
-| `5-definiteness.py` | Determines matrix definiteness using NumPy |
+| File                  | Description                      |
+| --------------------- | -------------------------------- |
+| `0-sigma_is_for_sum`  | Sigma summation notation         |
+| `1-seegma`            | Summation expansion              |
+| `2-pi_is_for_product` | Product notation                 |
+| `3-pee`               | Product evaluation               |
+| `4-hello_derivatives` | Basic derivatives                |
+| `5-log_on_fire`       | Product rule derivatives         |
+| `6-voltaire`          | Chain rule derivatives           |
+| `7-partial_truths`    | Partial derivatives              |
+| `8-all-together`      | Higher order partial derivatives |
+| `9-sum_total.py`      | Summation of squares             |
+| `10-matisse.py`       | Polynomial derivatives           |
+| `11-integral`         | Indefinite integrals             |
+| `12-integral`         | Exponential integrals            |
+| `13-definite`         | Definite integrals               |
+| `14-definite`         | Symmetric definite integrals     |
+| `15-definite`         | Constant definite integrals      |
+| `16-double`           | Double integrals                 |
+| `17-integrate.py`     | Polynomial integration           |
 
 ---
 
 # Concepts
 
-## Determinant
+## Summation
 
-The determinant is a scalar value calculated from a square matrix.
+Sigma notation is used to represent repeated addition.
 
-For a `2x2` matrix:
-
-[
-\begin{vmatrix}
-a & b \
-c & d
-\end{vmatrix}
-= ad - bc
-]
-
-A matrix is invertible only if its determinant is non-zero.
-
----
-
-## Minor Matrix
-
-The minor of an element is the determinant of the submatrix formed by removing its row and column.
-
-The minor matrix contains all minors of a matrix.
-
----
-
-## Cofactor Matrix
-
-The cofactor matrix applies alternating signs to the minor matrix.
-
-Sign pattern:
-
-```text
-+ - + -
-- + - +
-+ - + -
-```
-
-Formula:
+Example:
 
 [
-C_{ij} = (-1)^{i+j} M_{ij}
+\sum_{i=1}^{5} i = 1 + 2 + 3 + 4 + 5
 ]
 
 ---
 
-## Adjugate Matrix
+## Product
 
-The adjugate matrix is the transpose of the cofactor matrix.
+Pi notation is used to represent repeated multiplication.
+
+Example:
 
 [
-adj(A) = C^T
+\prod_{i=1}^{4} i = 1 \times 2 \times 3 \times 4
 ]
 
 ---
 
-## Inverse Matrix
+## Derivatives
 
-The inverse of a matrix is calculated using:
+The derivative measures the rate of change of a function.
+
+### Power Rule
 
 [
-A^{-1} = \frac{1}{det(A)} \times adj(A)
+\frac{d}{dx}(x^n) = nx^{n-1}
 ]
 
-A matrix is singular if its determinant is `0`, meaning it has no inverse.
+Example:
+
+[
+\frac{d}{dx}(x^3) = 3x^2
+]
 
 ---
 
-## Matrix Definiteness
+## Integrals
 
-Definiteness describes the behavior of quadratic forms and depends on eigenvalues.
+Integration is the reverse process of differentiation.
 
-### Categories
+### Power Rule
 
-| Condition on Eigenvalues | Definiteness           |
-| ------------------------ | ---------------------- |
-| All eigenvalues > 0      | Positive definite      |
-| All eigenvalues >= 0     | Positive semi-definite |
-| All eigenvalues < 0      | Negative definite      |
-| All eigenvalues <= 0     | Negative semi-definite |
-| Mixed signs              | Indefinite             |
+[
+\int x^n , dx = \frac{x^{n+1}}{n+1} + C
+]
+
+Example:
+
+[
+\int x^3 , dx = \frac{x^4}{4} + C
+]
+
+---
+
+## Partial Derivatives
+
+Partial derivatives differentiate multivariable functions with respect to one variable while treating the others as constants.
+
+Example:
+
+[
+\frac{\partial}{\partial y}(e^{xy}) = xe^{xy}
+]
 
 ---
 
 # Usage
 
-## Determinant
+## Summation of Squares
 
 ```python
-determinant = __import__('0-determinant').determinant
+summation_i_squared = __import__('9-sum_total').summation_i_squared
 
-matrix = [[1, 2], [3, 4]]
-
-print(determinant(matrix))
+print(summation_i_squared(5))
 ```
 
 Output:
 
 ```text
--2
+55
 ```
 
 ---
 
-## Inverse
+## Polynomial Derivative
 
 ```python
-inverse = __import__('4-inverse').inverse
+poly_derivative = __import__('10-matisse').poly_derivative
 
-matrix = [[1, 2], [3, 4]]
+poly = [5, 3, 0, 1]
 
-print(inverse(matrix))
+print(poly_derivative(poly))
 ```
 
 Output:
 
 ```text
-[[-2.0, 1.0], [1.5, -0.5]]
+[3, 0, 3]
 ```
 
 ---
 
-# Example
+## Polynomial Integral
 
-Matrix:
+```python
+poly_integral = __import__('17-integrate').poly_integral
 
-```text
-[[5, 7, 9],
- [3, 1, 8],
- [6, 2, 4]]
+poly = [5, 3, 0, 1]
+
+print(poly_integral(poly))
 ```
 
-## Cofactor Matrix
+Output:
 
 ```text
-[[-12, 36, 0],
- [-10, -34, 32],
- [47, -13, -16]]
-```
-
-## Adjugate Matrix
-
-```text
-[[-12, -10, 47],
- [36, -34, -13],
- [0, 32, -16]]
+[0, 5, 1.5, 0, 0.25]
 ```
 
 ---
@@ -207,3 +200,6 @@ Matrix:
 # Author
 
 Karthikeyan Marimuthu
+
+```
+```
