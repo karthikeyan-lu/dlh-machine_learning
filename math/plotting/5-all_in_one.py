@@ -31,54 +31,51 @@ def all_in_one():
     np.random.seed(5)
     student_grades = np.random.normal(68, 15, 50)
 
-    plt.figure(figsize=(6.4, 4.8))
-    plt.suptitle("All in One")
+    plt.figure(figsize=(10, 8), constrained_layout=True)
 
-    # Plot 1
     plt.subplot(3, 2, 1)
     plt.plot(y0, 'r-')
     plt.xlim(0, 10)
 
-    # Plot 2
     plt.subplot(3, 2, 2)
-    plt.scatter(x1, y1, c='m')
+    plt.scatter(x1, y1, color='m', s=5)
+    plt.title("Men's Height vs Weight", fontsize='x-small')
     plt.xlabel("Height (in)", fontsize='x-small')
     plt.ylabel("Weight (lbs)", fontsize='x-small')
-    plt.title("Men's Height vs Weight", fontsize='x-small')
 
-    # Plot 3
     plt.subplot(3, 2, 3)
     plt.plot(x2, y2)
-    plt.xlabel("Time (years)", fontsize='x-small')
-    plt.ylabel("Fraction Remaining", fontsize='x-small')
-    plt.title("Exponential Decay of C-14", fontsize='x-small')
     plt.yscale('log')
     plt.xlim(0, 28650)
+    plt.title("Exponential Decay of C-14", fontsize='x-small')
+    plt.xlabel("Time (years)", fontsize='x-small')
+    plt.ylabel("Fraction Remaining", fontsize='x-small')
 
-    # Plot 4
     plt.subplot(3, 2, 4)
     plt.plot(x3, y31, 'r--', label='C-14')
     plt.plot(x3, y32, 'g-', label='Ra-226')
-    plt.xlabel("Time (years)", fontsize='x-small')
-    plt.ylabel("Fraction Remaining", fontsize='x-small')
+    plt.legend(loc='upper right')
+    plt.xlim(0, 20000)
+    plt.ylim(0, 1)
     plt.title(
         "Exponential Decay of Radioactive Elements",
         fontsize='x-small'
     )
-    plt.xlim(0, 20000)
-    plt.ylim(0, 1)
-    plt.legend(loc='upper right', fontsize='x-small')
+    plt.xlabel("Time (years)", fontsize='x-small')
+    plt.ylabel("Fraction Remaining", fontsize='x-small')
 
-    # Plot 5 (spans entire bottom row)
     plt.subplot(3, 2, (5, 6))
-    plt.hist(
-        student_grades,
-        bins=np.arange(0, 101, 10),
-        edgecolor='black'
-    )
+    plt.hist(student_grades,
+             bins=np.arange(0, 101, 10),
+             edgecolor='black')
+    plt.xlim(0, 100)
+    plt.ylim(0, 30)
+    plt.xticks(np.arange(0, 101, 10))
+    plt.yticks(np.arange(0, 31, 10))
+    plt.title("Project A", fontsize='x-small')
     plt.xlabel("Grades", fontsize='x-small')
     plt.ylabel("Number of Students", fontsize='x-small')
-    plt.title("Project A", fontsize='x-small')
 
-    plt.tight_layout()
+    plt.suptitle("All in One")
+
     plt.show()
