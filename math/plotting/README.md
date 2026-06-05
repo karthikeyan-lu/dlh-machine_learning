@@ -1,205 +1,95 @@
-````md
-# Calculus
+# Plotting
 
-This project covers fundamental calculus concepts including summation, products, derivatives, partial derivatives, and integrals using pure Python.
+## Description
+
+This project introduces data visualization using **Matplotlib** and **NumPy**. The tasks focus on creating different types of plots, customizing axes, labels, legends, scales, colors, and combining multiple plots into a single figure.
 
 ## Learning Objectives
 
 At the end of this project, you should be able to explain:
 
-* Summation and Product notation
-* What a series is
-* Common series
-* What a derivative is
-* What the product rule is
-* What the chain rule is
-* Common derivative rules
-* What a partial derivative is
-* What an indefinite integral is
-* What a definite integral is
-* What a double integral is
+* How to plot data using Matplotlib
+* How to create line graphs
+* How to create scatter plots
+* How to create histograms
+* How to create bar charts
+* How to customize plot titles and axis labels
+* How to use logarithmic scales
+* How to create legends
+* How to work with subplots
+* How to combine multiple visualizations into a single figure
 
----
+## Requirements
 
-# Requirements
+* Ubuntu 20.04 LTS
+* Python 3.9
+* NumPy 1.25.2
+* Matplotlib 3.8.3
+* Pillow 10.3.0
 
-## General
+## Installation
 
-* Allowed editors: `vi`, `vim`, `emacs`
-* All files interpreted/compiled on Ubuntu 20.04 LTS using:
+```bash
+pip install --user matplotlib==3.8.3
+pip install --user Pillow==10.3.0
+```
 
-  * Python `3.9`
+## Files
 
-* All files should end with a new line
-* The first line of all files should be:
+| Task | Description            | File                |
+| ---- | ---------------------- | ------------------- |
+| 0    | Line Graph             | `0-line.py`         |
+| 1    | Scatter Plot           | `1-scatter.py`      |
+| 2    | Change of Scale        | `2-change_scale.py` |
+| 3    | Two is Better Than One | `3-two.py`          |
+| 4    | Frequency              | `4-frequency.py`    |
+| 5    | All in One             | `5-all_in_one.py`   |
+| 6    | Stacking Bars          | `6-bars.py`         |
 
-```python
-#!/usr/bin/env python3
-````
+## Tasks
 
-* Code should follow `pycodestyle` style (`version 2.11.1`)
-* All files must be executable
-* All modules and functions must be documented
-* Unless otherwise noted, you are not allowed to import any module
+### 0. Line Graph
 
----
+Plot a cubic function as a solid red line graph.
 
-# Files
+### 1. Scatter Plot
 
-| File                  | Description                      |
-| --------------------- | -------------------------------- |
-| `0-sigma_is_for_sum`  | Sigma summation notation         |
-| `1-seegma`            | Summation expansion              |
-| `2-pi_is_for_product` | Product notation                 |
-| `3-pee`               | Product evaluation               |
-| `4-hello_derivatives` | Basic derivatives                |
-| `5-log_on_fire`       | Product rule derivatives         |
-| `6-voltaire`          | Chain rule derivatives           |
-| `7-partial_truths`    | Partial derivatives              |
-| `8-all-together`      | Higher order partial derivatives |
-| `9-sum_total.py`      | Summation of squares             |
-| `10-matisse.py`       | Polynomial derivatives           |
-| `11-integral`         | Indefinite integrals             |
-| `12-integral`         | Exponential integrals            |
-| `13-definite`         | Definite integrals               |
-| `14-definite`         | Symmetric definite integrals     |
-| `15-definite`         | Constant definite integrals      |
-| `16-double`           | Double integrals                 |
-| `17-integrate.py`     | Polynomial integration           |
+Plot height versus weight data as a scatter plot using magenta points.
 
----
+### 2. Change of Scale
 
-# Concepts
+Plot the exponential decay of Carbon-14 using a logarithmic y-axis.
 
-## Summation
+### 3. Two is Better Than One
 
-Sigma notation is used to represent repeated addition.
+Compare the exponential decay of Carbon-14 and Radium-226 using two line graphs and a legend.
+
+### 4. Frequency
+
+Create a histogram showing the distribution of student grades.
+
+### 5. All in One
+
+Combine all previous plots into a single figure using a 3 × 2 grid layout.
+
+### 6. Stacking Bars
+
+Create a stacked bar chart representing fruit quantities owned by different people.
+
+## Usage
+
+Run a file using:
+
+```bash
+python3 <filename>
+```
 
 Example:
 
-[
-\sum_{i=1}^{5} i = 1 + 2 + 3 + 4 + 5
-]
-
----
-
-## Product
-
-Pi notation is used to represent repeated multiplication.
-
-Example:
-
-[
-\prod_{i=1}^{4} i = 1 \times 2 \times 3 \times 4
-]
-
----
-
-## Derivatives
-
-The derivative measures the rate of change of a function.
-
-### Power Rule
-
-[
-\frac{d}{dx}(x^n) = nx^{n-1}
-]
-
-Example:
-
-[
-\frac{d}{dx}(x^3) = 3x^2
-]
-
----
-
-## Integrals
-
-Integration is the reverse process of differentiation.
-
-### Power Rule
-
-[
-\int x^n , dx = \frac{x^{n+1}}{n+1} + C
-]
-
-Example:
-
-[
-\int x^3 , dx = \frac{x^4}{4} + C
-]
-
----
-
-## Partial Derivatives
-
-Partial derivatives differentiate multivariable functions with respect to one variable while treating the others as constants.
-
-Example:
-
-[
-\frac{\partial}{\partial y}(e^{xy}) = xe^{xy}
-]
-
----
-
-# Usage
-
-## Summation of Squares
-
-```python
-summation_i_squared = __import__('9-sum_total').summation_i_squared
-
-print(summation_i_squared(5))
+```bash
+python3 6-bars.py
 ```
 
-Output:
+## Author
 
-```text
-55
-```
-
----
-
-## Polynomial Derivative
-
-```python
-poly_derivative = __import__('10-matisse').poly_derivative
-
-poly = [5, 3, 0, 1]
-
-print(poly_derivative(poly))
-```
-
-Output:
-
-```text
-[3, 0, 3]
-```
-
----
-
-## Polynomial Integral
-
-```python
-poly_integral = __import__('17-integrate').poly_integral
-
-poly = [5, 3, 0, 1]
-
-print(poly_integral(poly))
-```
-
-Output:
-
-```text
-[0, 5, 1.5, 0, 0.25]
-```
-
----
-
-# Author
-
-Karthikeyan Marimuthu
-
-```
-```
+**Karthikeyan Marimuthu**
