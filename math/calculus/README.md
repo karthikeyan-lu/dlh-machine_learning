@@ -1,151 +1,115 @@
-````md
-# Calculus
+# Calculus - AI Academy (DLH)
 
-This project covers fundamental calculus concepts including summation, products, derivatives, partial derivatives, and integrals using pure Python.
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-yellow)
 
-## Learning Objectives
-
-At the end of this project, you should be able to explain:
-
-* Summation and Product notation
-* What a series is
-* Common series
-* What a derivative is
-* What the product rule is
-* What the chain rule is
-* Common derivative rules
-* What a partial derivative is
-* What an indefinite integral is
-* What a definite integral is
-* What a double integral is
+This project contains calculus exercises covering summation, products, derivatives, partial derivatives, indefinite integrals, definite integrals, double integrals, and polynomial calculus using pure Python.
 
 ---
 
-# Requirements
+## Objective
 
-## General
+To build practical calculus knowledge by learning:
 
-* Allowed editors: `vi`, `vim`, `emacs`
-* All files interpreted/compiled on Ubuntu 20.04 LTS using:
-
-  * Python `3.9`
-
-* All files should end with a new line
-* The first line of all files should be:
-
-```python
-#!/usr/bin/env python3
-````
-
-* Code should follow `pycodestyle` style (`version 2.11.1`)
-* All files must be executable
-* All modules and functions must be documented
-* Unless otherwise noted, you are not allowed to import any module
+- Sigma notation
+- Product notation
+- Series expansion
+- Derivative rules
+- Product rule
+- Chain rule
+- Partial derivatives
+- Indefinite integrals
+- Definite integrals
+- Double integrals
+- Polynomial differentiation and integration
 
 ---
 
-# Files
+## Topics Covered
 
-| File                  | Description                      |
-| --------------------- | -------------------------------- |
-| `0-sigma_is_for_sum`  | Sigma summation notation         |
-| `1-seegma`            | Summation expansion              |
-| `2-pi_is_for_product` | Product notation                 |
-| `3-pee`               | Product evaluation               |
-| `4-hello_derivatives` | Basic derivatives                |
-| `5-log_on_fire`       | Product rule derivatives         |
-| `6-voltaire`          | Chain rule derivatives           |
-| `7-partial_truths`    | Partial derivatives              |
-| `8-all-together`      | Higher order partial derivatives |
-| `9-sum_total.py`      | Summation of squares             |
-| `10-matisse.py`       | Polynomial derivatives           |
-| `11-integral`         | Indefinite integrals             |
-| `12-integral`         | Exponential integrals            |
-| `13-definite`         | Definite integrals               |
-| `14-definite`         | Symmetric definite integrals     |
-| `15-definite`         | Constant definite integrals      |
-| `16-double`           | Double integrals                 |
-| `17-integrate.py`     | Polynomial integration           |
+### Summation and Products
 
----
+- Sigma notation
+- Summation expansion
+- Pi notation
+- Product expansion
+- Series operations
 
-# Concepts
+### Derivatives
 
-## Summation
+- Basic derivative rules
+- Polynomial derivatives
+- Product rule
+- Chain rule
+- Partial derivatives
+- Higher-order partial derivatives
 
-Sigma notation is used to represent repeated addition.
+### Integrals
 
-Example:
-
-[
-\sum_{i=1}^{5} i = 1 + 2 + 3 + 4 + 5
-]
+- Indefinite integrals
+- Exponential integrals
+- Definite integrals
+- Symmetric definite integrals
+- Constant definite integrals
+- Double integrals
+- Polynomial integration
 
 ---
 
-## Product
+## Requirements
 
-Pi notation is used to represent repeated multiplication.
-
-Example:
-
-[
-\prod_{i=1}^{4} i = 1 \times 2 \times 3 \times 4
-]
-
----
-
-## Derivatives
-
-The derivative measures the rate of change of a function.
-
-### Power Rule
-
-[
-\frac{d}{dx}(x^n) = nx^{n-1}
-]
-
-Example:
-
-[
-\frac{d}{dx}(x^3) = 3x^2
-]
+- Ubuntu 20.04 LTS
+- Python 3.9
+- `pycodestyle` 2.11.1
+- All Python files should be executable
+- All Python files should begin with `#!/usr/bin/env python3`
+- Modules and functions should be documented
+- Unless otherwise noted, modules should not be imported
 
 ---
 
-## Integrals
+## Files
 
-Integration is the reverse process of differentiation.
-
-### Power Rule
-
-[
-\int x^n , dx = \frac{x^{n+1}}{n+1} + C
-]
-
-Example:
-
-[
-\int x^3 , dx = \frac{x^4}{4} + C
-]
-
----
-
-## Partial Derivatives
-
-Partial derivatives differentiate multivariable functions with respect to one variable while treating the others as constants.
-
-Example:
-
-[
-\frac{\partial}{\partial y}(e^{xy}) = xe^{xy}
-]
+| File | Description |
+| --- | --- |
+| `0-sigma_is_for_sum` | Represents sigma summation notation |
+| `1-seegma` | Expands summation notation |
+| `2-pi_is_for_product` | Represents product notation |
+| `3-pee` | Expands product notation |
+| `4-hello_derivatives` | Covers basic derivative rules |
+| `5-log_on_fire` | Covers product rule derivatives |
+| `6-voltaire` | Covers chain rule derivatives |
+| `7-partial_truths` | Covers partial derivatives |
+| `8-all-together` | Covers higher-order partial derivatives |
+| `9-sum_total.py` | Calculates the summation of `i^2` |
+| `10-matisse.py` | Calculates the derivative of a polynomial |
+| `11-integral` | Covers indefinite integrals |
+| `12-integral` | Covers exponential integrals |
+| `13-definite` | Covers definite integrals |
+| `14-definite` | Covers symmetric definite integrals |
+| `15-definite` | Covers constant definite integrals |
+| `16-double` | Covers double integrals |
+| `17-integrate.py` | Calculates the integral of a polynomial |
 
 ---
 
-# Usage
+## Key Concepts Used
 
-## Summation of Squares
+- Summation notation
+- Product notation
+- Polynomial functions
+- Derivative rules
+- Integral rules
+- Function validation
+- List-based polynomial representation
+- Pure Python arithmetic
+
+---
+
+## Usage
+
+Calculate a summation of squares:
 
 ```python
 summation_i_squared = __import__('9-sum_total').summation_i_squared
@@ -159,15 +123,12 @@ Output:
 55
 ```
 
----
-
-## Polynomial Derivative
+Calculate a polynomial derivative:
 
 ```python
 poly_derivative = __import__('10-matisse').poly_derivative
 
 poly = [5, 3, 0, 1]
-
 print(poly_derivative(poly))
 ```
 
@@ -177,15 +138,12 @@ Output:
 [3, 0, 3]
 ```
 
----
-
-## Polynomial Integral
+Calculate a polynomial integral:
 
 ```python
 poly_integral = __import__('17-integrate').poly_integral
 
 poly = [5, 3, 0, 1]
-
 print(poly_integral(poly))
 ```
 
@@ -197,9 +155,6 @@ Output:
 
 ---
 
-# Author
+## Author
 
-Karthikeyan Marimuthu
-
-```
-```
+Karthikeyan Marimuthu - AI Academy, Digital Learning Hub Luxembourg
