@@ -5,31 +5,33 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.3-green)
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Shell%20%26%20PyMongo-green)
+![Statistics](https://img.shields.io/badge/Statistics-Probability-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-red)
 
-This repository contains my mathematics, visualization, and data pipeline exercises for the **AI Academy course at DLH**. It demonstrates hands-on practice across calculus, linear algebra, plotting, SQL, MongoDB, and PyMongo.
+This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
 
 ---
 
 ## Objective
 
-To build the foundations needed for machine learning by learning:
+To build the mathematical and technical foundations required for machine learning by learning:
 
 - Calculus notation and polynomial calculus
-- Linear algebra operations with Python lists and NumPy
+- Linear algebra operations using Python and NumPy
 - Advanced matrix operations and definiteness
-- Data visualization with Matplotlib
+- Probability distributions and statistical modeling
+- Data visualization using Matplotlib
 - SQL database querying and optimization
 - MongoDB shell operations
-- PyMongo-based document workflows
-- Basic data pipeline and log analytics patterns
+- PyMongo document workflows
+- Data pipeline and log analytics concepts
 
 ---
 
 ## Topics Covered
 
-### Math
+### Mathematics
 
 - Summation and product notation
 - Derivatives and partial derivatives
@@ -37,7 +39,21 @@ To build the foundations needed for machine learning by learning:
 - Matrix shapes and slicing
 - Matrix addition, concatenation, and multiplication
 - Determinants, minors, cofactors, adjugates, and inverses
-- Eigenvalue-based matrix definiteness
+- Eigenvalues and matrix definiteness
+
+### Probability and Statistics
+
+- Poisson Distribution
+- Exponential Distribution
+- Normal Distribution
+- Binomial Distribution
+- PMF (Probability Mass Function)
+- PDF (Probability Density Function)
+- CDF (Cumulative Distribution Function)
+- Mean and Variance
+- Standard Deviation
+- Z-Scores
+- Method of Moments
 
 ### Visualization
 
@@ -48,17 +64,17 @@ To build the foundations needed for machine learning by learning:
 - Subplots
 - Logarithmic scales
 - Color gradients and color bars
-- 3D PCA visualization
+- PCA visualization in 3D
 
 ### Data Pipeline and Databases
 
 - MySQL database and table creation
 - SQL filtering, sorting, aggregation, and joins
 - SQL constraints, indexes, views, triggers, functions, and procedures
-- MongoDB shell CRUD operations
-- PyMongo collection operations
-- MongoDB aggregation
-- Nginx log statistics
+- MongoDB CRUD operations
+- MongoDB Aggregation Framework
+- PyMongo document workflows
+- Nginx log analytics
 
 ---
 
@@ -67,27 +83,48 @@ To build the foundations needed for machine learning by learning:
 | Folder | Description |
 | --- | --- |
 | `math/calculus` | Calculus notation, derivatives, integrals, and polynomial calculus |
-| `math/linear_algebra` | Python and NumPy matrix operations for foundational linear algebra |
-| `math/advanced_linear_algebra` | Determinants, minors, cofactors, adjugates, inverses, and definiteness |
-| `math/plotting` | Matplotlib and NumPy visualizations, including PCA plotting |
-| `pipeline/databases` | MySQL, MongoDB shell, and PyMongo database exercises |
+| `math/linear_algebra` | Matrix operations using Python lists and NumPy |
+| `math/advanced_linear_algebra` | Determinants, inverses, adjugates, minors, cofactors, and definiteness |
+| `math/probability` | Probability distributions and statistical modeling |
+| `math/plotting` | Data visualization using Matplotlib and NumPy |
+| `pipeline/databases` | MySQL, MongoDB shell, and PyMongo exercises |
 
 ---
 
 ## Key Concepts Used
 
-- Python functions
-- Pure Python lists and nested lists
-- NumPy arrays
-- Matplotlib figures and axes
-- Matrix validation
-- Recursive matrix algorithms
-- SQL queries
-- MySQL joins and aggregation
-- MySQL indexes, views, triggers, procedures, and functions
-- MongoDB documents and collections
+### Mathematics
+
+- Calculus
+- Linear Algebra
+- Matrix Theory
+- Eigenvalues and Definiteness
+
+### Probability and Statistics
+
+- Probability Distributions
+- PMF, PDF, and CDF
+- Statistical Estimation
+- Mean and Variance
+- Standard Deviation
+- Z-Scores
+- Method of Moments
+
+### Programming
+
+- Python Functions
+- Recursive Algorithms
+- Object-Oriented Programming
+- Numerical Computing
+
+### Data Technologies
+
+- NumPy
+- Matplotlib
+- SQL
+- MySQL
+- MongoDB
 - PyMongo
-- Aggregation pipelines
 
 ---
 
@@ -100,6 +137,7 @@ dlh-machine_learning/
 │   ├── calculus/
 │   ├── linear_algebra/
 │   ├── advanced_linear_algebra/
+│   ├── probability/
 │   └── plotting/
 │
 ├── pipeline/
@@ -128,10 +166,16 @@ dlh-machine_learning/
 
 ## Usage
 
-Run a Python task:
+Run a linear algebra task:
 
 ```bash
 python3 math/linear_algebra/0-slice_me_up.py
+```
+
+Run a probability task:
+
+```bash
+python3 math/probability/normal.py
 ```
 
 Run a plotting task:
@@ -159,6 +203,7 @@ python3 pipeline/databases/34-log_stats.py
 - `math/calculus/README.md`
 - `math/linear_algebra/README.md`
 - `math/advanced_linear_algebra/README.md`
+- `math/probability/README.md`
 - `math/plotting/README.md`
 - `pipeline/databases/README.md`
 
