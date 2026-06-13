@@ -6,9 +6,7 @@ class Normal:
     """Represents a normal distribution"""
 
     def __init__(self, data=None, mean=0., stddev=1.):
-        """
-        Initialize normal distribution
-        """
+        """Initialize normal distribution"""
 
         if data is None:
 
@@ -46,3 +44,23 @@ class Normal:
             variance /= len(data)
 
             self.stddev = variance ** 0.5
+
+    def z_score(self, x):
+        """
+        Calculates the z-score of x
+        """
+
+        return (
+            (x - self.mean)
+            / self.stddev
+        )
+
+    def x_value(self, z):
+        """
+        Calculates the x-value of z
+        """
+
+        return (
+            self.mean
+            + z * self.stddev
+        )
