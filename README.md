@@ -5,7 +5,10 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.3-green)
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Shell%20%26%20PyMongo-green)
-![Statistics](https://img.shields.io/badge/Statistics-Probability-orange)
+![Calculus](https://img.shields.io/badge/Calculus-Core-red)
+![Linear Algebra](https://img.shields.io/badge/Linear%20Algebra-Advanced-purple)
+![Probability](https://img.shields.io/badge/Probability-Distributions-orange)
+![Statistics](https://img.shields.io/badge/Statistics-Foundations-yellow)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-red)
 
