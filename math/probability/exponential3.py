@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Poisson distribution"""
+"""Exponential distribution"""
 
 
-class Poisson:
-    """Represents a Poisson distribution"""
+class Exponential:
+    """Represents an exponential distribution"""
 
     def __init__(self, data=None, lambtha=1.):
         """
-        Initialize Poisson distribution
+        Class constructor
 
         Args:
-            data: list of observed data
+            data: list of data to estimate the distribution
             lambtha: expected number of occurrences
         """
 
         if data is None:
+
             if lambtha <= 0:
                 raise ValueError(
                     "lambtha must be a positive value"
@@ -23,6 +24,7 @@ class Poisson:
             self.lambtha = float(lambtha)
 
         else:
+
             if not isinstance(data, list):
                 raise TypeError(
                     "data must be a list"
@@ -33,6 +35,5 @@ class Poisson:
                     "data must contain multiple values"
                 )
 
-            self.lambtha = float(
-                sum(data) / len(data)
-            )
+            mean = sum(data) / len(data)
+            self.lambtha = float(1 / mean)
