@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module defining a Binomial distribution."""
+"""Module that defines a Binomial distribution."""
 
 
 class Binomial:
@@ -56,3 +56,64 @@ class Binomial:
 
             self.n = int(n)
             self.p = float(p)
+
+    def pmf(self, k):
+        """Calculate the probability mass function.
+
+        Args:
+            k: Number of successes.
+
+        Returns:
+            The PMF value for k successes.
+        """
+
+        k = int(k)
+
+        if k < 0 or k > self.n:
+            return 0
+
+        n_fact = 1
+        for i in range(1, self.n + 1):
+            n_fact *= i
+
+        k_fact = 1
+        for i in range(1, k + 1):
+            k_fact *= i
+
+        nk_fact = 1
+        for i in range(1, self.n - k + 1):
+            nk_fact *= i
+
+        combination = n_fact / (k_fact * nk_fact)
+
+        return (
+            combination
+            * (self.p ** k)
+            * ((1 - self.p) ** (self.n - k))
+        )
+
+    def cdf(self, k):
+        """Calculate the cumulative distribution function.
+
+        Args:
+            k: Number of successes.
+
+        Returns:
+            The probability of obtaining at most
+            k successes.
+        """
+
+        k = int(k)
+
+        if k < 0:
+            return 0
+
+        if k > self.n:
+            k = self.n
+
+        cdf = 0
+
+        for i in range(k + 1):
+            cdf += self.pmf(i)
+
+        return cdf
