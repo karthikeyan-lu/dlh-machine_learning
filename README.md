@@ -8,11 +8,12 @@
 ![Calculus](https://img.shields.io/badge/Calculus-Core-red)
 ![Linear Algebra](https://img.shields.io/badge/Linear%20Algebra-Advanced-purple)
 ![Probability](https://img.shields.io/badge/Probability-Distributions-orange)
+![Bayesian Probability](https://img.shields.io/badge/Bayesian%20Probability-Inference-teal)
 ![Statistics](https://img.shields.io/badge/Statistics-Foundations-yellow)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-red)
 
-This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
+This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, Bayesian inference, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
 
 ---
 
@@ -24,6 +25,7 @@ To build the mathematical and technical foundations required for machine learnin
 - Linear algebra operations using Python and NumPy
 - Advanced matrix operations and definiteness
 - Probability distributions and statistical modeling
+- Bayesian probability and posterior inference
 - Data visualization using Matplotlib
 - SQL database querying and optimization
 - MongoDB shell operations
@@ -57,6 +59,11 @@ To build the mathematical and technical foundations required for machine learnin
 - Standard Deviation
 - Z-Scores
 - Method of Moments
+- Prior Probability
+- Likelihood
+- Marginal Probability
+- Posterior Probability
+- Continuous Posterior Intervals
 
 ### Visualization
 
@@ -89,6 +96,7 @@ To build the mathematical and technical foundations required for machine learnin
 | `math/linear_algebra` | Matrix operations using Python lists and NumPy |
 | `math/advanced_linear_algebra` | Determinants, inverses, adjugates, minors, cofactors, and definiteness |
 | `math/probability` | Probability distributions and statistical modeling |
+| `math/bayesian_prob` | Bayesian probability, likelihood, marginal probability, and posterior inference |
 | `math/plotting` | Data visualization using Matplotlib and NumPy |
 | `pipeline/databases` | MySQL, MongoDB shell, and PyMongo exercises |
 
@@ -108,6 +116,8 @@ To build the mathematical and technical foundations required for machine learnin
 - Probability Distributions
 - PMF, PDF, and CDF
 - Statistical Estimation
+- Bayesian Inference
+- Prior, Likelihood, Marginal, and Posterior Probability
 - Mean and Variance
 - Standard Deviation
 - Z-Scores
@@ -141,6 +151,7 @@ dlh-machine_learning/
 │   ├── linear_algebra/
 │   ├── advanced_linear_algebra/
 │   ├── probability/
+│   ├── bayesian_prob/
 │   └── plotting/
 │
 ├── pipeline/
@@ -159,6 +170,7 @@ dlh-machine_learning/
 - Python 3.9
 - NumPy 1.25.2
 - Matplotlib 3.8.3
+- SciPy
 - Pillow 10.3.0
 - MySQL
 - MongoDB
@@ -179,6 +191,12 @@ Run a probability task:
 
 ```bash
 python3 math/probability/normal.py
+```
+
+Run a Bayesian probability task:
+
+```bash
+python3 math/bayesian_prob/3-main.py
 ```
 
 Run a plotting task:
@@ -207,6 +225,7 @@ python3 pipeline/databases/34-log_stats.py
 - `math/linear_algebra/README.md`
 - `math/advanced_linear_algebra/README.md`
 - `math/probability/README.md`
+- `math/bayesian_prob/README.md`
 - `math/plotting/README.md`
 - `pipeline/databases/README.md`
 

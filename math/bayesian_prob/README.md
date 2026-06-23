@@ -1,54 +1,50 @@
-# Probability - AI Academy (DLH)
+# Bayesian Probability - AI Academy (DLH)
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
-![Math](https://img.shields.io/badge/Mathematics-Probability-orange)
-![Statistics](https://img.shields.io/badge/Statistics-Distributions-green)
+![NumPy](https://img.shields.io/badge/NumPy-Bayesian%20Arrays-orange)
+![SciPy](https://img.shields.io/badge/SciPy-Beta%20Posterior-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-This project implements several probability distributions from scratch using Python. It focuses on statistical modeling, probability mass functions (PMF), probability density functions (PDF), cumulative distribution functions (CDF), parameter estimation, and distribution analysis.
+This project implements Bayesian probability calculations in Python. It focuses on likelihood, intersection, marginal probability, posterior probability, and continuous posterior intervals for binomial observations.
 
 ---
 
 ## Objective
 
-To build a strong foundation in probability and statistics by learning:
+To build a practical foundation in Bayesian probability by learning:
 
-- Probability distributions
-- Distribution parameter estimation
-- Probability Mass Functions (PMF)
-- Probability Density Functions (PDF)
-- Cumulative Distribution Functions (CDF)
-- Mean, variance, and standard deviation
-- Z-scores and normalization
-- Statistical modeling using Python
+- Binomial likelihood calculations
+- Prior probability distributions
+- Intersection of likelihood and prior
+- Marginal probability of observed data
+- Posterior probability updates
+- Continuous posterior probability over an interval
+- Input validation for probabilistic models
 
 ---
 
 ## Topics Covered
 
-### Discrete Distributions
+### Bayesian Inference
 
-- Poisson Distribution
-- Binomial Distribution
+- Prior probability
+- Likelihood
+- Intersection
+- Marginal probability
+- Posterior probability
 
-### Continuous Distributions
+### Binomial Modeling
 
-- Exponential Distribution
-- Normal Distribution
+- Number of successes
+- Number of trials
+- Candidate probability values
+- Uniform prior assumptions
 
-### Statistical Concepts
+### Continuous Posterior Probability
 
-- Mean
-- Variance
-- Standard Deviation
-- Z-Score
-- Method of Moments
-
-### Probability Functions
-
-- PMF (Probability Mass Function)
-- PDF (Probability Density Function)
-- CDF (Cumulative Distribution Function)
+- Beta distribution parameters
+- Posterior probability over a range
+- Regularized incomplete beta function
 
 ---
 
@@ -56,8 +52,8 @@ To build a strong foundation in probability and statistics by learning:
 
 - Ubuntu 20.04 LTS
 - Python 3.9
-- No external libraries
-- No module imports
+- NumPy
+- SciPy
 - All Python files should be executable
 - All Python files should begin with `#!/usr/bin/env python3`
 - Modules and functions should be documented
@@ -69,40 +65,44 @@ To build a strong foundation in probability and statistics by learning:
 
 | File | Description |
 | --- | --- |
-| `poisson.py` | Implementation of the Poisson distribution |
-| `exponential.py` | Implementation of the Exponential distribution |
-| `normal.py` | Implementation of the Normal (Gaussian) distribution |
-| `binomial.py` | Implementation of the Binomial distribution |
+| `0-likelihood.py` | Calculates the likelihood of observing `x` successes in `n` trials for each probability in `P` |
+| `1-intersection.py` | Calculates the intersection of likelihood and prior probability |
+| `2-marginal.py` | Calculates the marginal probability of the observed data |
+| `3-posterior.py` | Calculates posterior probabilities for each candidate probability |
+| `100-continuous.py` | Calculates the posterior probability that `p` falls within a continuous interval |
 
 ---
 
 ## Features
 
-### Poisson Distribution
+### Likelihood
 
-- Estimate λ from data
-- PMF calculation
-- CDF calculation
+- Validates the number of trials and successes
+- Validates candidate probability values
+- Computes binomial likelihood for a 1D NumPy array of probabilities
 
-### Exponential Distribution
+### Intersection
 
-- Estimate λ from data
-- PDF calculation
-- CDF calculation
+- Validates prior probabilities
+- Ensures prior probabilities match the candidate probability shape
+- Multiplies likelihood by the prior distribution
 
-### Normal Distribution
+### Marginal Probability
 
-- Estimate mean and standard deviation from data
-- Z-score calculation
-- X-value calculation
-- PDF calculation
-- CDF calculation
+- Computes the total probability of observing the data
+- Sums the intersection across all candidate probability values
 
-### Binomial Distribution
+### Posterior Probability
 
-- Estimate n and p using the Method of Moments
-- PMF calculation
-- CDF calculation
+- Applies Bayes' theorem
+- Normalizes the intersection by the marginal probability
+- Returns updated probabilities for each hypothesis in `P`
+
+### Continuous Posterior
+
+- Uses the beta posterior distribution
+- Calculates the probability that `p` lies between `p1` and `p2`
+- Uses SciPy's regularized incomplete beta function
 
 ---
 
@@ -117,13 +117,22 @@ python3
 Example:
 
 ```python
-from normal import Normal
+import numpy as np
 
-n = Normal(mean=70, stddev=10)
+posterior = __import__('3-posterior').posterior
 
-print(n.z_score(90))
-print(n.pdf(90))
-print(n.cdf(90))
+P = np.linspace(0, 1, 11)
+Pr = np.ones(11) / 11
+
+print(posterior(26, 130, P, Pr))
+```
+
+Continuous posterior example:
+
+```python
+posterior = __import__('100-continuous').posterior
+
+print(posterior(26, 130, 0.17, 0.23))
 ```
 
 ---
