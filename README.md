@@ -9,11 +9,12 @@
 ![Linear Algebra](https://img.shields.io/badge/Linear%20Algebra-Advanced-purple)
 ![Probability](https://img.shields.io/badge/Probability-Distributions-orange)
 ![Bayesian Probability](https://img.shields.io/badge/Bayesian%20Probability-Inference-teal)
+![Multivariate Probability](https://img.shields.io/badge/Multivariate%20Probability-Gaussian%20Models-green)
 ![Statistics](https://img.shields.io/badge/Statistics-Foundations-yellow)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-red)
 
-This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, Bayesian inference, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
+This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, Bayesian inference, multivariate probability, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
 
 ---
 
@@ -26,6 +27,7 @@ To build the mathematical and technical foundations required for machine learnin
 - Advanced matrix operations and definiteness
 - Probability distributions and statistical modeling
 - Bayesian probability and posterior inference
+- Multivariate probability and Gaussian modeling
 - Data visualization using Matplotlib
 - SQL database querying and optimization
 - MongoDB shell operations
@@ -64,6 +66,11 @@ To build the mathematical and technical foundations required for machine learnin
 - Marginal Probability
 - Posterior Probability
 - Continuous Posterior Intervals
+- Mean Vectors
+- Covariance Matrices
+- Correlation Matrices
+- Multivariate Normal Distribution
+- Multivariate PDF
 
 ### Visualization
 
@@ -97,6 +104,7 @@ To build the mathematical and technical foundations required for machine learnin
 | `math/advanced_linear_algebra` | Determinants, inverses, adjugates, minors, cofactors, and definiteness |
 | `math/probability` | Probability distributions and statistical modeling |
 | `math/bayesian_prob` | Bayesian probability, likelihood, marginal probability, and posterior inference |
+| `math/multivariate_prob` | Mean vectors, covariance, correlation, and multivariate normal distributions |
 | `math/plotting` | Data visualization using Matplotlib and NumPy |
 | `pipeline/databases` | MySQL, MongoDB shell, and PyMongo exercises |
 
@@ -118,6 +126,9 @@ To build the mathematical and technical foundations required for machine learnin
 - Statistical Estimation
 - Bayesian Inference
 - Prior, Likelihood, Marginal, and Posterior Probability
+- Multivariate Probability
+- Covariance and Correlation
+- Multivariate Normal Distributions
 - Mean and Variance
 - Standard Deviation
 - Z-Scores
@@ -152,6 +163,7 @@ dlh-machine_learning/
 │   ├── advanced_linear_algebra/
 │   ├── probability/
 │   ├── bayesian_prob/
+│   ├── multivariate_prob/
 │   └── plotting/
 │
 ├── pipeline/
@@ -199,6 +211,12 @@ Run a Bayesian probability task:
 python3 math/bayesian_prob/3-main.py
 ```
 
+Run a multivariate probability task:
+
+```bash
+python3 math/multivariate_prob/3-main.py
+```
+
 Run a plotting task:
 
 ```bash
@@ -226,6 +244,7 @@ python3 pipeline/databases/34-log_stats.py
 - `math/advanced_linear_algebra/README.md`
 - `math/probability/README.md`
 - `math/bayesian_prob/README.md`
+- `math/multivariate_prob/README.md`
 - `math/plotting/README.md`
 - `pipeline/databases/README.md`
 
