@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![NumPy](https://img.shields.io/badge/NumPy-1.25.2-orange)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.3-green)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-blue)
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Shell%20%26%20PyMongo-green)
 ![Calculus](https://img.shields.io/badge/Calculus-Core-red)
@@ -14,7 +15,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-red)
 
-This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, Bayesian inference, multivariate probability, statistics, data visualization, SQL, MongoDB, and foundational machine learning mathematics.
+This repository contains my mathematics, probability, visualization, and data pipeline exercises completed during the AI Academy program at Digital Learning Hub Luxembourg (DLH). The projects provide hands-on experience with calculus, linear algebra, probability, Bayesian inference, multivariate probability, statistics, data visualization, Pandas, SQL, MongoDB, and foundational machine learning mathematics.
 
 ---
 
@@ -29,6 +30,7 @@ To build the mathematical and technical foundations required for machine learnin
 - Bayesian probability and posterior inference
 - Multivariate probability and Gaussian modeling
 - Data visualization using Matplotlib
+- Data manipulation and analysis using Pandas
 - SQL database querying and optimization
 - MongoDB shell operations
 - PyMongo document workflows
@@ -83,6 +85,15 @@ To build the mathematical and technical foundations required for machine learnin
 - Color gradients and color bars
 - PCA visualization in 3D
 
+### Data Analysis
+
+- Pandas DataFrames
+- Data cleaning and preprocessing
+- Missing value handling
+- Time-series analysis
+- Hierarchical indexing
+- Data aggregation and visualization
+
 ### Data Pipeline and Databases
 
 - MySQL database and table creation
@@ -106,6 +117,7 @@ To build the mathematical and technical foundations required for machine learnin
 | `math/bayesian_prob` | Bayesian probability, likelihood, marginal probability, and posterior inference |
 | `math/multivariate_prob` | Mean vectors, covariance, correlation, and multivariate normal distributions |
 | `math/plotting` | Data visualization using Matplotlib and NumPy |
+| `pipeline/pandas` | Data manipulation, cleaning, analysis, and visualization using Pandas |
 | `pipeline/databases` | MySQL, MongoDB shell, and PyMongo exercises |
 
 ---
@@ -144,6 +156,7 @@ To build the mathematical and technical foundations required for machine learnin
 ### Data Technologies
 
 - NumPy
+- Pandas
 - Matplotlib
 - SQL
 - MySQL
@@ -167,6 +180,7 @@ dlh-machine_learning/
 │   └── plotting/
 │
 ├── pipeline/
+│   ├── pandas/
 │   └── databases/
 │
 ├── requirements.txt
@@ -182,6 +196,7 @@ dlh-machine_learning/
 - Python 3.9
 - NumPy 1.25.2
 - Matplotlib 3.8.3
+- Pandas
 - SciPy
 - Pillow 10.3.0
 - MySQL
@@ -223,6 +238,12 @@ Run a plotting task:
 python3 math/plotting/6-bars.py
 ```
 
+Run a Pandas task:
+
+```bash
+python3 pipeline/pandas/14-visualize.py
+```
+
 Run a MySQL script:
 
 ```bash
@@ -246,6 +267,7 @@ python3 pipeline/databases/34-log_stats.py
 - `math/bayesian_prob/README.md`
 - `math/multivariate_prob/README.md`
 - `math/plotting/README.md`
+- `pipeline/pandas/README.md`
 - `pipeline/databases/README.md`
 
 ---
