@@ -2,7 +2,6 @@
 """ Module for K-means clustering on the dataset X. """
 import scipy.cluster.hierarchy as sch
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def agglomerative(X, dist):
