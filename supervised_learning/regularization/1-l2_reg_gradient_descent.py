@@ -1,42 +1,19 @@
 #!/usr/bin/env python3
-"""Updates the weights and biases of a neural network using gradient
-descent with L2 regularization.
-"""
+'''Regularization'''
 import numpy as np
 
 
 def l2_reg_gradient_descent(Y, weights, cache, alpha, lambtha, L):
-    """Updates the weights and biases of a neural network using
-    gradient descent with L2 regularization.
-
-    Args:
-        Y: one-hot numpy.ndarray of shape (classes, m) that contains
-            the correct labels for the data
-        weights: dictionary of the weights and biases of the neural
-            network
-        cache: dictionary of the outputs of each layer of the neural
-            network
-        alpha: the learning rate
-        lambtha: the L2 regularization parameter
-        L: the number of layers of the network
-
-    Returns:
-        None; the weights and biases of the network are updated in
-        place
-    """
+    '''Updates the weights and biases of a neural network with L2
+    using gradient descent'''
     m = Y.shape[1]
-    weights_copy = {key: value.copy() for key, value in weights.items()}
     dZ = cache['A' + str(L)] - Y
-
     for i in range(L, 0, -1):
         A_prev = cache['A' + str(i - 1)]
-        W = weights_copy['W' + str(i)]
-
-        dW = (1 / m) * np.matmul(dZ, A_prev.T) + (lambtha / m) * W
-        db = (1 / m) * np.sum(dZ, axis=1, keepdims=True)
-
+        W = weights['W' + str(i)]
+        dW = (np.matmul(dZ, A_prev.T) / m) + ((lambtha / m) * W)
+        db = np.sum(dZ, axis=1, keepdims=True) / m
         if i > 1:
-            dZ = np.matmul(W.T, dZ) * (1 - A_prev ** 2)
-
+            dZ = np.matmul(W.T, dZ) * (1 - np.square(A_prev))
         weights['W' + str(i)] -= alpha * dW
         weights['b' + str(i)] -= alpha * db
