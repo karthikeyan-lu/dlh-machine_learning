@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
-""" L2 regularization cost for a Keras model. """
+"""Calculates the cost of a neural network with L2 regularization
+using Keras.
+"""
 import tensorflow as tf
 
 
 def l2_reg_cost(cost, model):
-    """ Extract the L2 regularization cost for each layer of a Keras model.
+    """Calculates the cost of a neural network with L2 regularization.
 
     Args:
-        cost : tensor containing the unregularized cost
-        model : Keras model that includes layers with L2 regularization.
+        cost: a tensor containing the cost of the network without L2
+            regularization
+        model: a Keras model that includes layers with L2
+            regularization
 
     Returns:
-        tf.Tensor: a 1D tensor containing the L2 regularization loss for
-                   each regularized layer in the model. The order matches
-                   the order in which the layers were added.
+        a tensor containing the total cost for each layer of the
+        network, accounting for L2 regularization
     """
-
-    reg_losses = model.losses
-    if not reg_losses:
-        return tf.constant([], dtype=tf.float32)
-
-    total_costs = cost + tf.reduce_sum(model.losses)
-    return total_costs
+    return cost + tf.stack(model.losses)
