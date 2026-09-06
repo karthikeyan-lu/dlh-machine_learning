@@ -1,31 +1,21 @@
 #!/usr/bin/env python3
-"""Conducts forward propagation using Dropout."""
+"""Forward propagation with dropout"""
+
 import numpy as np
 
 
 def dropout_forward_prop(X, weights, L, keep_prob):
-    """Conducts forward propagation using Dropout.
+    """Creates the forward propagation graph using dropout"""
 
-    Args:
-        X: numpy.ndarray of shape (nx, m) containing the input data
-            for the network
-        weights: dictionary of the weights and biases of the neural
-            network
-        L: the number of layers in the network
-        keep_prob: the probability that a node will be kept
-
-    Returns:
-        a dictionary containing the outputs of each layer and the
-        dropout mask used on each layer
-    """
-    cache = {'A0': X}
+    cache = {}
+    cache["A0"] = X
+    A = X
 
     for i in range(1, L + 1):
-        W = weights['W' + str(i)]
-        b = weights['b' + str(i)]
-        A_prev = cache['A' + str(i - 1)]
+        W = weights["W{}".format(i)]
+        b = weights["b{}".format(i)]
 
-        Z = np.matmul(W, A_prev) + b
+        Z = np.matmul(W, A) + b
 
         if i == L:
             t = np.exp(Z)
@@ -33,10 +23,9 @@ def dropout_forward_prop(X, weights, L, keep_prob):
         else:
             A = np.tanh(Z)
             D = np.random.binomial(1, keep_prob, size=A.shape)
-            A = A * D
-            A = A / keep_prob
-            cache['D' + str(i)] = D
+            A = (A * D) / keep_prob
+            cache["D{}".format(i)] = D
 
-        cache['A' + str(i)] = A
+        cache["A{}".format(i)] = A
 
     return cache
