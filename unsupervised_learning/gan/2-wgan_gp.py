@@ -109,7 +109,7 @@ class WGAN_GP(keras.Model):
             interpolated_sample = self.get_interpolated_sample(
                 real_sample, fake_sample
             )
-            with tf.GradientTape() as tape:
+            with tf.GradientTape() as disc_tape:
                 real_pred = self.discriminator(real_sample, training=True)
                 fake_pred = self.discriminator(fake_sample, training=True)
 
